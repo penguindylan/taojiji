@@ -2,6 +2,9 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;padding-top:3.3rem;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--brown);line-height:1.7}
+.intro-overlay{position:fixed;inset:0;z-index:10;display:grid;place-items:center;background:var(--bg);animation:intro-fade-out 1.5s ease .5s forwards}
+.intro-overlay img{width:min(60vw,320px);height:auto;object-fit:contain}
+@keyframes intro-fade-out{to{opacity:0;visibility:hidden}}
 .hero{position:relative;isolation:isolate;overflow:hidden;background:#c1773f;text-align:center;padding:3.5rem 1rem}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:url("image/images%20(1).jpg") center 55%/cover fixed;opacity:.6}
 .hero h1{margin:0;font-size:3rem;letter-spacing:.4em;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.4)}
@@ -50,4 +53,4 @@ footer a{color:#ffe0b2}
 @media(max-width:600px){.itinerary-panel{min-height:300px;padding-left:4rem}.timeline-arrow{left:1rem;width:2rem}}
 @media(max-width:600px){nav{gap:.65rem;padding:.8rem .5rem  .8rem 3rem;font-size:.9rem}nav .nav-logo{left:.6rem}nav .nav-logo img{width:1.8rem;height:1.8rem}}
 @media(max-width:768px){.hero::before{background-attachment:scroll}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.section-label,nav a{transition:none}.timeline-arrow,.timeline-line{animation:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.section-label,nav a{transition:none}.intro-overlay{animation-duration:1ms;animation-delay:0s}.timeline-arrow,.timeline-line{animation:none}}

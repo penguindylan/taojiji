@@ -9,6 +9,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="intro-overlay" aria-hidden="true">
+<img src="image/taojiji_logo.png" alt="">
+</div>
 <header class="hero">
 <h1>陶集吉</h1>
 <p class="sub">新北一日遊・鶯歌</p>
@@ -55,6 +58,9 @@
 <p class="copyright">Copyright © 2026 陶集吉｜學校分組專案。All rights reserved.</p>
 </footer>
 <script>
+const introOverlay = document.querySelector(".intro-overlay");
+introOverlay.addEventListener("animationend", () => introOverlay.remove(), { once: true });
+
 const pageSections = Array.from(document.querySelectorAll("main section, footer[id]"));
 const sectionLinks = Array.from(document.querySelectorAll('nav a[href^="#"]:not(.nav-logo)'));
 const intersectingSections = new Set();
