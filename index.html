@@ -16,7 +16,7 @@
 </header>
 <nav>
 <a class="nav-logo" href="#product" aria-label="陶集吉首頁"><img src="image/taojiji_logo.png" alt="陶集吉團隊 Logo"></a>
-<a href="#product">產品介紹</a><a href="#itinerary">行程</a><a href="#pricing">定價</a><a href="#updates">更新日誌</a><a href="#contact">關於我們</a>
+<a href="#product">產品介紹</a><a href="#itinerary">行程</a><a href="#pricing">定價</a><a href="#contact">關於我們</a>
 </nav>
 <main>
 <section id="product">
@@ -45,14 +45,6 @@
 </section>
 <section id="pricing">
 <h2><span class="section-label">定價</span></h2>
-</section>
-<section id="updates">
-<h2><span class="section-label">更新日誌</span></h2>
-<p class="updates-intro">分享陶集吉的最新消息與 Instagram 貼文。</p>
-<div id="updates-list" class="updates-list" aria-live="polite" aria-busy="true">
-<p class="updates-status">正在載入更新日誌…</p>
-</div>
-<p class="updates-instagram">追蹤我們的 Instagram：<a href="https://www.instagram.com/cycu11544" target="_blank" rel="noopener noreferrer">@cycu11544</a></p>
 </section>
 </main>
 <footer id="contact">
@@ -102,6 +94,5 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 pageSections.forEach((section) => sectionObserver.observe(section));
 </script>
-<script src="updates.js" defer></script>
 </body>
 </html>
