@@ -2,8 +2,10 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;padding-top:3.3rem;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--brown);line-height:1.7}
-.intro-overlay{position:fixed;inset:0;z-index:10;display:grid;place-items:center;background:var(--bg);animation:intro-fade-out 1.5s ease .5s forwards}
+.intro-overlay{position:fixed;inset:0;z-index:10;display:grid;place-items:center;background:var(--bg);animation:intro-fade-out 1s ease .5s forwards}
+.intro-brand{display:flex;flex-direction:column;align-items:center}
 .intro-overlay img{width:min(60vw,320px);height:auto;object-fit:contain}
+.intro-brand p{margin:.75rem 0 0;color:var(--brown);font-size:1.2rem;font-weight:bold;letter-spacing:.12em}
 @keyframes intro-fade-out{to{opacity:0;visibility:hidden}}
 .hero{position:relative;isolation:isolate;overflow:hidden;background:#c1773f;text-align:center;padding:3.5rem 1rem}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:url("image/images%20(1).jpg") center 55%/cover fixed;opacity:.6}
