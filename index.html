@@ -5,8 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>陶集吉｜新北鶯歌一日遊</title>
 <meta name="description" content="陶集吉－新北一日遊：以親子為目標客群的鶯歌景點與美食資料整理">
-<link rel="icon" type="image/png" href="image/taojiji_logo.png">
+<link rel="icon" type="image/png" sizes="480x480" href="image/taojiji-icon.png">
+<link rel="apple-touch-icon" href="image/taojiji-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="陶集吉｜新北鶯歌一日遊">
+<meta property="og:description" content="陶集吉－新北一日遊：以親子為目標客群的鶯歌景點與美食資料整理">
+<meta property="og:url" content="https://penguindylan.github.io/taojiji/">
+<meta property="og:image" content="https://penguindylan.github.io/taojiji/image/taojiji-icon.png">
+<meta property="og:image:width" content="480">
+<meta property="og:image:height" content="480">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
 <div class="intro-overlay" aria-hidden="true">
@@ -17,12 +26,12 @@
 </div>
 <header class="hero">
 <h1>陶集吉</h1>
-<p class="sub">新北一日遊・鶯歌</p>
+<p class="sub">新北鶯歌一日遊</p>
 <p class="task">屬於你的陶瓷之旅</p>
 </header>
 <nav>
 <a class="nav-logo" href="#product" aria-label="陶集吉首頁"><img src="image/taojiji_logo.png" alt="陶集吉團隊 Logo"></a>
-<a href="#product">產品介紹</a><a href="#itinerary">行程</a><a href="#pricing">定價</a><a href="#contact">關於我們</a>
+<a href="#product">產品介紹</a><a href="#itinerary">行程</a><a href="#food-map">美食地圖</a><a href="#pricing">定價</a><a href="#contact">關於我們</a>
 </nav>
 <main>
 <section id="product">
@@ -44,22 +53,114 @@
 <section id="itinerary">
 <h2><span class="section-label">行程</span></h2>
 <div class="itinerary-panel" aria-label="行程內容區域">
-<svg class="timeline-arrow" viewBox="0 0 56 320" preserveAspectRatio="none" aria-hidden="true">
-<path class="timeline-line" d="M28 0 C6 24 50 48 28 72 C6 96 50 120 28 144 C6 168 50 192 28 216 C6 240 50 264 28 288 L28 304 M12 290 L28 308 L44 290"/>
-</svg>
+<ol class="itinerary-list">
+<li>
+<span class="timeline-track" aria-hidden="true"><svg viewBox="0 0 56 100" preserveAspectRatio="none"><path d="M28 0 C6 22 50 28 28 50 C6 72 50 78 28 100"/></svg><span class="timeline-dot"></span></span>
+<button class="itinerary-toggle" type="button" aria-expanded="false" aria-controls="itinerary-stop-1"><time datetime="09:30">09:30</time><span class="itinerary-heading"><strong>鶯歌火車站集合</strong><span>集合出發，展開鶯歌一日遊。</span></span><span class="toggle-icon" aria-hidden="true">＋</span></button>
+<div class="itinerary-details" id="itinerary-stop-1" aria-hidden="true" inert><div class="itinerary-details-inner"><p>在鶯歌火車站集合，準備出發探索鶯歌。</p><dl><dt>時間</dt><dd>09:30 集合</dd><dt>門票／費用</dt><dd>無門票；搭乘火車的車資另計。</dd><dt>地址</dt><dd>新北市鶯歌區文化路 68-1 號（車站）<a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%B6%AF%E6%AD%8C%E7%81%AB%E8%BB%8A%E7%AB%99" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/台鐵鶯歌火車站.jpg" alt="台鐵鶯歌火車站"><figcaption>台鐵鶯歌火車站</figcaption></figure></div></div>
+</li>
+<li>
+<span class="timeline-track" aria-hidden="true"><svg viewBox="0 0 56 100" preserveAspectRatio="none"><path d="M28 0 C6 22 50 28 28 50 C6 72 50 78 28 100"/></svg><span class="timeline-dot"></span></span>
+<button class="itinerary-toggle" type="button" aria-expanded="false" aria-controls="itinerary-stop-2"><time datetime="10:00">10:00</time><span class="itinerary-heading"><strong>鶯歌陶瓷博物館</strong><span>參觀陶瓷博物館，認識陶藝文化。</span></span><span class="toggle-icon" aria-hidden="true">＋</span></button>
+<div class="itinerary-details" id="itinerary-stop-2" aria-hidden="true" inert><div class="itinerary-details-inner"><p>走訪鶯歌陶瓷博物館，認識陶藝文化與製作歷程。</p><dl><dt>時間</dt><dd>10:00</dd><dt>門票／費用</dt><dd>全票 NT$80；優待及免票資格依館方公告為準。</dd><dt>地址</dt><dd>新北市鶯歌區文化路 200 號 <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E9%B6%AF%E6%AD%8C%E9%99%B6%E7%93%B7%E5%8D%9A%E7%89%A9%E9%A4%A8" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/鶯歌陶瓷博物館.jpg" alt="鶯歌陶瓷博物館建築"><figcaption>鶯歌陶瓷博物館</figcaption></figure></div></div>
+</li>
+<li>
+<span class="timeline-track" aria-hidden="true"><svg viewBox="0 0 56 100" preserveAspectRatio="none"><path d="M28 0 C6 22 50 28 28 50 C6 72 50 78 28 100"/></svg><span class="timeline-dot"></span></span>
+<button class="itinerary-toggle" type="button" aria-expanded="false" aria-controls="itinerary-stop-3"><span class="itinerary-time">途中</span><span class="itinerary-heading"><strong>鶯歌透明景觀電梯</strong><span>行程途中經過鶯歌透明景觀電梯。</span></span><span class="toggle-icon" aria-hidden="true">＋</span></button>
+<div class="itinerary-details" id="itinerary-stop-3" aria-hidden="true" inert><div class="itinerary-details-inner"><p>行程途中經過鶯歌透明景觀電梯，欣賞鶯歌街區景色。</p><dl><dt>時間</dt><dd>陶瓷博物館參觀後、午餐前</dd><dt>門票／費用</dt><dd>免門票。</dd><dt>地址</dt><dd>新北市鶯歌區尖山埔路（陶瓷老街周邊，實際入口請以地圖標示為準）<a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%B6%AF%E6%AD%8C%E9%80%8F%E6%98%8E%E6%99%AF%E8%A7%80%E9%9B%BB%E6%A2%AF" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/鶯歌透明景觀電梯.jpg" alt="鶯歌透明景觀電梯"><figcaption>鶯歌透明景觀電梯</figcaption></figure></div></div>
+</li>
+<li>
+<span class="timeline-track" aria-hidden="true"><svg viewBox="0 0 56 100" preserveAspectRatio="none"><path d="M28 0 C6 22 50 28 28 50 C6 72 50 78 28 100"/></svg><span class="timeline-dot"></span></span>
+<button class="itinerary-toggle" type="button" aria-expanded="false" aria-controls="itinerary-stop-4"><time datetime="12:30">12:30</time><span class="itinerary-heading"><strong>鶯歌老街午餐</strong><span>到老街享用中餐、稍作休息。</span></span><span class="toggle-icon" aria-hidden="true">＋</span></button>
+<div class="itinerary-details" id="itinerary-stop-4" aria-hidden="true" inert><div class="itinerary-details-inner"><p>到鶯歌老街享用中餐，在地用餐並稍作休息。</p><dl><dt>時間</dt><dd>12:30</dd><dt>門票／費用</dt><dd>老街免門票；餐費依各店家消費另計。</dd><dt>地址</dt><dd>新北市鶯歌區尖山埔路一帶（陶瓷老街徒步區）<a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%B6%AF%E6%AD%8C%E9%99%B6%E7%93%B7%E8%80%81%E8%A1%97" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/images%20(1).jpg" alt="鶯歌老街街景"><figcaption>鶯歌老街街景</figcaption></figure></div></div>
+</li>
+<li>
+<span class="timeline-track" aria-hidden="true"><svg viewBox="0 0 56 100" preserveAspectRatio="none"><path d="M28 0 C6 22 50 28 28 50 C6 72 50 78 28 100"/></svg><span class="timeline-dot"></span></span>
+<button class="itinerary-toggle" type="button" aria-expanded="false" aria-controls="itinerary-stop-5"><time datetime="14:00">14:00</time><span class="itinerary-heading"><strong>新旺集瓷</strong><span>走訪新旺集瓷，感受鶯歌陶瓷特色。</span></span><span class="toggle-icon" aria-hidden="true">＋</span></button>
+<div class="itinerary-details" id="itinerary-stop-5" aria-hidden="true" inert><div class="itinerary-details-inner"><p>走訪新旺集瓷，欣賞鶯歌陶瓷與特色選品。</p><dl><dt>時間</dt><dd>14:00</dd><dt>門票／費用</dt><dd>逛店免門票；陶藝體驗或購物費用另計。</dd><dt>地址</dt><dd>新北市鶯歌區尖山埔路 81 號 <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E6%97%BA%E9%9B%86%E7%93%B7%20%E9%B6%AF%E6%AD%8C" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/新旺瓷集.jpg" alt="新旺集瓷店面"><figcaption>新旺集瓷</figcaption></figure></div></div>
+</li>
+<li>
+<span class="timeline-track" aria-hidden="true"><svg viewBox="0 0 56 100" preserveAspectRatio="none"><path d="M28 0 C6 22 50 28 28 50 C6 72 50 78 28 100"/></svg><span class="timeline-dot"></span></span>
+<button class="itinerary-toggle" type="button" aria-expanded="false" aria-controls="itinerary-stop-6"><time datetime="15:40">15:40</time><span class="itinerary-heading"><strong>阿嬤ㄟ豆花</strong><span>品嚐豆花，為午後行程補充甜蜜滋味。</span></span><span class="toggle-icon" aria-hidden="true">＋</span></button>
+<div class="itinerary-details" id="itinerary-stop-6" aria-hidden="true" inert><div class="itinerary-details-inner"><p>到阿嬤ㄟ豆花享用甜點，為午後行程補充甜蜜滋味。</p><dl><dt>時間</dt><dd>15:40</dd><dt>地址</dt><dd>新北市鶯歌區鶯歌老街周邊（詳細店址請以地圖資訊為準）<a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%98%BF%E5%AC%A4%E3%84%9F%E8%B1%86%E8%8A%B1%20%E9%B6%AF%E6%AD%8C" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/阿嬤ㄟ豆花.jpg" alt="阿嬤ㄟ豆花店面"><figcaption>阿嬤ㄟ豆花</figcaption></figure></div></div>
+</li>
+<li class="itinerary-finish">
+<span class="timeline-track" aria-hidden="true"><svg viewBox="0 0 56 100" preserveAspectRatio="none"><path d="M28 0 C6 22 50 28 28 50 C6 72 50 78 28 100"/></svg><span class="timeline-dot"></span><svg class="timeline-tip" viewBox="0 0 56 44" preserveAspectRatio="none"><path d="M28 0 L28 15 M10 5 L28 42 L46 5"/></svg></span>
+<button class="itinerary-toggle" type="button" aria-expanded="false" aria-controls="itinerary-stop-7"><time datetime="16:30">16:30</time><span class="itinerary-heading"><strong>行程結束</strong><span>結束一天的鶯歌行程。</span></span><span class="toggle-icon" aria-hidden="true">＋</span></button>
+<div class="itinerary-details" id="itinerary-stop-7" aria-hidden="true" inert><div class="itinerary-details-inner"><p>16:30 結束一天的鶯歌行程。</p><dl><dt>時間</dt><dd>16:30</dd><dt>地址</dt><dd>新北市鶯歌區文化路 68-1 號（鶯歌火車站）<a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%B6%AF%E6%AD%8C%E7%81%AB%E8%BB%8A%E7%AB%99" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/台鐵鶯歌火車站.jpg" alt="台鐵鶯歌火車站"><figcaption>返程集合點：台鐵鶯歌火車站</figcaption></figure></div></div>
+</li>
+</ol>
+</div>
+</section>
+<section id="food-map">
+<h2><span class="section-label">美食地圖</span></h2>
+<div class="food-map-layout">
+<div class="food-map-places">
+<h3>地圖中的地點</h3>
+<ul>
+<li><button class="food-place-link" type="button" data-lat="24.9517389" data-lng="121.3474285">川流茶空間</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9514261" data-lng="121.3474682">Soleil croissant 可頌咖啡廳 鶯歌老街店</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9512485" data-lng="121.3471697">Lilli's Mill 酸種麵包 Sourdough Bread</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9510496" data-lng="121.34715">阿嬤ㄟ豆花</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9509482" data-lng="121.347215">甜不辣、臭豆腐、大腸麵線</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9508952" data-lng="121.3486912">小豆芽滷味</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9511519" data-lng="121.3485571">陶瓷大餅</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9511586" data-lng="121.3486269">客家手工麻糬</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.95096" data-lng="121.348744">阿蓮脆皮紅豆餅</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9517985" data-lng="121.3496689">Teaday喝茶天－茶家食堂－鶯歌</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9518252" data-lng="121.3488795">古早味現炸咔哩咔哩</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9518809" data-lng="121.3487872">HAN'S BURGER 美式手作漢堡專賣店</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9521093" data-lng="121.3483865">綿綿古早味</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9521165" data-lng="121.347786">鶯歌甕仔麵</button></li>
+</ul>
+</div>
+<div class="food-map-column">
+<div class="food-map-frame">
+<div id="food-map-canvas" role="application" aria-label="鶯歌美食互動地圖"></div>
+<p class="food-map-status" id="food-map-status" role="status">正在載入地圖…</p>
+</div>
+<a class="food-map-original" href="https://www.google.com/maps/d/viewer?mid=1rkMuv5jYbGaZ8piJXKTrUKpqOj9PcMk" target="_blank" rel="noopener noreferrer">在 Google My Maps 查看原始地圖 ↗</a>
+</div>
 </div>
 </section>
 <section id="pricing">
 <h2><span class="section-label">定價</span></h2>
+<p class="pricing-pending">待定</p>
 </section>
 </main>
 <footer id="contact">
 <p class="footer-brand">陶集吉｜新北一日遊</p>
-<p>聯絡我們<br>Instagram：<a href="https://www.instagram.com/cycu11544" target="_blank" rel="noopener noreferrer">@cycu11544</a></p>
+<p>聯絡我們<br>Instagram：<a href="https://www.instagram.com/taojiji11544" target="_blank" rel="noopener noreferrer">@taojiji11544</a></p>
 <p>Email：<a href="mailto:pigdylan@gmail.com">pigdylan@gmail.com</a></p>
 <p>手機：<a href="tel:0917673000">0917-673-000</a></p>
 <p class="copyright">Copyright © 2026 陶集吉｜學校分組專案。All rights reserved.</p>
 </footer>
+<aside class="site-assistant" aria-label="鶯歌行程問答小幫手">
+<section class="assistant-panel" id="assistant-panel" aria-labelledby="assistant-title" hidden>
+<header class="assistant-header">
+<div><h2 id="assistant-title">陶集吉小幫手</h2><p>鶯歌行程問題，快速幫你找答案</p></div>
+<button class="assistant-close" type="button" aria-label="關閉問答視窗">×</button>
+</header>
+<div class="assistant-messages" id="assistant-messages" role="log" aria-live="polite" aria-relevant="additions text">
+<p class="assistant-message assistant-bot">你好！想問行程、門票或景點地址嗎？</p>
+</div>
+<div class="assistant-quick-questions" aria-label="常見問題">
+<button type="button">行程時間</button>
+<button type="button">門票多少？</button>
+<button type="button">博物館地址</button>
+</div>
+<form class="assistant-form">
+<label class="visually-hidden" for="assistant-input">輸入你的問題</label>
+<input id="assistant-input" name="question" type="text" placeholder="輸入問題…" autocomplete="off" required>
+<button type="submit">送出</button>
+</form>
+<p class="assistant-note">此為網站內建問答，資訊請以店家／館方公告為準。</p>
+</section>
+<button class="assistant-launcher" type="button" aria-expanded="false" aria-controls="assistant-panel">
+<span aria-hidden="true">✦</span> 問問小幫手
+</button>
+</aside>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
 const introOverlay = document.querySelector(".intro-overlay");
 introOverlay.addEventListener("animationend", () => introOverlay.remove(), { once: true });
@@ -102,6 +203,171 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: "-40% 0px -50% 0px" });
 
 pageSections.forEach((section) => sectionObserver.observe(section));
+
+const foodMapStatus = document.querySelector("#food-map-status");
+const foodPlaceLinks = Array.from(document.querySelectorAll(".food-place-link"));
+const foodPlaceMarkers = new Map();
+
+if (!window.L) {
+  foodMapStatus.textContent = "互動地圖載入失敗，請檢查網路連線，或改用下方 Google My Maps 原始地圖。";
+  console.error("Leaflet failed to load; the interactive food map is unavailable.");
+} else {
+  const foodMap = L.map("food-map-canvas", { scrollWheelZoom: false });
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> 貢獻者'
+  }).addTo(foodMap);
+
+  function selectFoodPlace(placeLink, openPopup) {
+    foodPlaceLinks.forEach((link) => {
+      const selected = link === placeLink;
+      link.classList.toggle("is-selected", selected);
+      link.setAttribute("aria-pressed", String(selected));
+    });
+    const marker = foodPlaceMarkers.get(placeLink);
+    if (marker) {
+      foodPlaceMarkers.forEach((otherMarker) => {
+        if (otherMarker !== marker && otherMarker.isPopupOpen()) otherMarker.closePopup();
+      });
+      foodMap.setView(marker.getLatLng(), 18);
+      if (openPopup) marker.openPopup();
+    }
+  }
+
+  const mapMarkers = foodPlaceLinks.map((placeLink) => {
+    const latitude = Number(placeLink.dataset.lat);
+    const longitude = Number(placeLink.dataset.lng);
+    if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
+      throw new Error(`Invalid map coordinates for food place: ${placeLink.textContent.trim()}`);
+    }
+
+    const placeName = placeLink.textContent.trim();
+    const marker = L.marker([latitude, longitude]).addTo(foodMap);
+    const popup = document.createElement("div");
+    const heading = document.createElement("strong");
+    heading.textContent = placeName;
+    const mapLink = document.createElement("a");
+    mapLink.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(placeName + " 鶯歌")}`;
+    mapLink.target = "_blank";
+    mapLink.rel = "noopener noreferrer";
+    mapLink.textContent = "在 Google 地圖查看 ↗";
+    popup.append(heading, document.createElement("br"), mapLink);
+    marker.bindPopup(popup);
+    foodPlaceMarkers.set(placeLink, marker);
+
+    marker.on("click", () => selectFoodPlace(placeLink, true));
+    placeLink.setAttribute("aria-pressed", "false");
+    placeLink.addEventListener("click", () => selectFoodPlace(placeLink, true));
+    return marker;
+  });
+
+  foodMap.fitBounds(L.featureGroup(mapMarkers).getBounds(), { padding: [24, 24], maxZoom: 16 });
+  foodMapStatus.hidden = true;
+}
+
+document.querySelectorAll(".itinerary-panel li").forEach((item) => {
+  const toggle = item.querySelector(".itinerary-toggle");
+  const details = item.querySelector(".itinerary-details");
+  function setExpanded(expanded) {
+    toggle.setAttribute("aria-expanded", String(expanded));
+    details.setAttribute("aria-hidden", String(!expanded));
+    details.inert = !expanded;
+    details.classList.toggle("is-open", expanded);
+    item.classList.toggle("is-expanded", expanded);
+  }
+
+  toggle.addEventListener("click", () => {
+    setExpanded(toggle.getAttribute("aria-expanded") !== "true");
+  });
+});
+
+const assistant = document.querySelector(".site-assistant");
+const assistantPanel = assistant.querySelector(".assistant-panel");
+const assistantLauncher = assistant.querySelector(".assistant-launcher");
+const assistantClose = assistant.querySelector(".assistant-close");
+const assistantForm = assistant.querySelector(".assistant-form");
+const assistantInput = assistant.querySelector("#assistant-input");
+const assistantMessages = assistant.querySelector(".assistant-messages");
+
+function setAssistantOpen(open) {
+  assistantPanel.hidden = !open;
+  assistantLauncher.setAttribute("aria-expanded", String(open));
+  if (open) assistantInput.focus();
+}
+
+function addAssistantMessage(text, sender, link) {
+  const message = document.createElement("p");
+  message.className = `assistant-message assistant-${sender}`;
+  message.textContent = text;
+  assistantMessages.append(message);
+  if (link) {
+    const anchor = document.createElement("a");
+    anchor.href = link.url;
+    anchor.target = "_blank";
+    anchor.rel = "noopener noreferrer";
+    anchor.textContent = link.label;
+    message.append(document.createElement("br"), anchor);
+  }
+  assistantMessages.scrollTop = assistantMessages.scrollHeight;
+}
+
+function answerAssistantQuestion(question) {
+  const text = question.toLowerCase().replace(/\s+/g, "");
+  if (/行程|幾點|時間|幾點集合|集合/.test(text)) {
+    return { text: "行程是 09:30 鶯歌火車站集合、10:00 陶瓷博物館、途中經過鶯歌透明景觀電梯、12:30 老街午餐、14:00 新旺集瓷、15:40 阿嬤ㄟ豆花，16:30 結束。", link: { label: "查看完整行程", url: "#itinerary" } };
+  }
+  if (/門票|票價|多少錢|費用|花費|免費/.test(text)) {
+    return { text: "陶瓷博物館全票 NT$80，優待與免票資格依館方公告為準；透明景觀電梯與老街免門票。新旺集瓷逛店免門票，體驗或購物、餐飲費用另計。" };
+  }
+  if (/博物館|陶博/.test(text) && /地址|在哪|地點|地圖|怎麼去/.test(text)) {
+    return { text: "鶯歌陶瓷博物館地址：新北市鶯歌區文化路 200 號。", link: { label: "開啟 Google 地圖", url: "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E9%B6%AF%E6%AD%8C%E9%99%B6%E7%93%B7%E5%8D%9A%E7%89%A9%E9%A4%A8" } };
+  }
+  if (/新旺/.test(text)) {
+    return { text: "新旺集瓷位於新北市鶯歌區尖山埔路 81 號，逛店免門票，陶藝體驗或購物費用另計。", link: { label: "開啟 Google 地圖", url: "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E6%97%BA%E9%9B%86%E7%93%B7%20%E9%B6%AF%E6%AD%8C" } };
+  }
+  if (/豆花|阿嬤/.test(text)) {
+    return { text: "阿嬤ㄟ豆花在鶯歌老街周邊，無門票，餐點依店內價格另計；可用地圖查看店家位置。", link: { label: "開啟 Google 地圖", url: "https://www.google.com/maps/search/?api=1&query=%E9%98%BF%E5%AC%A4%E3%84%9F%E8%B1%86%E8%8A%B1%20%E9%B6%AF%E6%AD%8C" } };
+  }
+  if (/老街|吃飯|午餐/.test(text)) {
+    return { text: "鶯歌陶瓷老街位於尖山埔路一帶，老街免門票，午餐費用依店家消費另計。", link: { label: "開啟 Google 地圖", url: "https://www.google.com/maps/search/?api=1&query=%E9%B6%AF%E6%AD%8C%E9%99%B6%E7%93%B7%E8%80%81%E8%A1%97" } };
+  }
+  if (/電梯|景觀/.test(text)) {
+    return { text: "鶯歌透明景觀電梯位於陶瓷老街周邊，免門票；實際位置可查看地圖。", link: { label: "開啟 Google 地圖", url: "https://www.google.com/maps/search/?api=1&query=%E9%B6%AF%E6%AD%8C%E9%80%8F%E6%98%8E%E6%99%AF%E8%A7%80%E9%9B%BB%E6%A2%AF" } };
+  }
+  if (/車站|火車|交通|集合/.test(text)) {
+    return { text: "集合地點是台鐵鶯歌火車站；搭乘火車的交通費依出發地與票種而異。", link: { label: "開啟 Google 地圖", url: "https://www.google.com/maps/search/?api=1&query=%E9%B6%AF%E6%AD%8C%E7%81%AB%E8%BB%8A%E7%AB%99" } };
+  }
+  return { text: "我目前可以回答行程時間、門票費用，以及陶瓷博物館、透明景觀電梯、老街、新旺集瓷、阿嬤ㄟ豆花和火車站的資訊。可以換個方式再問我喔！" };
+}
+
+function submitAssistantQuestion(question) {
+  const trimmedQuestion = question.trim();
+  if (!trimmedQuestion) return;
+  addAssistantMessage(trimmedQuestion, "user");
+  const answer = answerAssistantQuestion(trimmedQuestion);
+  addAssistantMessage(answer.text, "bot", answer.link);
+}
+
+assistantLauncher.addEventListener("click", () => setAssistantOpen(true));
+assistantClose.addEventListener("click", () => {
+  setAssistantOpen(false);
+  assistantLauncher.focus();
+});
+assistantForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  submitAssistantQuestion(assistantInput.value);
+  assistantInput.value = "";
+  assistantInput.focus();
+});
+assistant.querySelectorAll(".assistant-quick-questions button").forEach((button) => {
+  button.addEventListener("click", () => submitAssistantQuestion(button.textContent));
+});
+assistantPanel.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    setAssistantOpen(false);
+    assistantLauncher.focus();
+  }
+});
 </script>
 </body>
 </html>
