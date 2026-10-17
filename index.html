@@ -32,6 +32,7 @@
 <nav>
 <a class="nav-logo" href="#product" aria-label="陶集吉首頁"><img src="image/taojiji_logo.png" alt="陶集吉團隊 Logo"></a>
 <a href="#product">產品介紹</a><a href="#itinerary">行程</a><a href="#food-map">美食地圖</a><a href="#pricing">定價</a><a href="#contact">關於我們</a>
+<time class="nav-datetime" id="current-datetime" aria-label="目前日期與時間"></time>
 </nav>
 <main>
 <section id="product">
@@ -57,7 +58,7 @@
 <li>
 <span class="timeline-track" aria-hidden="true"><svg viewBox="0 0 56 100" preserveAspectRatio="none"><path d="M28 0 C6 22 50 28 28 50 C6 72 50 78 28 100"/></svg><span class="timeline-dot"></span></span>
 <button class="itinerary-toggle" type="button" aria-expanded="false" aria-controls="itinerary-stop-1"><time datetime="09:30">09:30</time><span class="itinerary-heading"><strong>鶯歌火車站集合</strong><span>集合出發，展開鶯歌一日遊。</span></span><span class="toggle-icon" aria-hidden="true">＋</span></button>
-<div class="itinerary-details" id="itinerary-stop-1" aria-hidden="true" inert><div class="itinerary-details-inner"><p>在鶯歌火車站集合，準備出發探索鶯歌。</p><dl><dt>時間</dt><dd>09:30 集合</dd><dt>門票／費用</dt><dd>無門票；搭乘火車的車資另計。</dd><dt>地址</dt><dd>新北市鶯歌區文化路 68-1 號（車站）<a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%B6%AF%E6%AD%8C%E7%81%AB%E8%BB%8A%E7%AB%99" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/台鐵鶯歌火車站.jpg" alt="台鐵鶯歌火車站"><figcaption>台鐵鶯歌火車站</figcaption></figure></div></div>
+<div class="itinerary-details" id="itinerary-stop-1" aria-hidden="true" inert><div class="itinerary-details-inner"><p>在鶯歌火車站集合，準備出發探索鶯歌。</p><dl><dt>時間</dt><dd>09:30 集合</dd><dt>地址</dt><dd>新北市鶯歌區文化路 68-1 號（車站）<a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%B6%AF%E6%AD%8C%E7%81%AB%E8%BB%8A%E7%AB%99" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/台鐵鶯歌火車站.jpg" alt="台鐵鶯歌火車站"><figcaption>台鐵鶯歌火車站</figcaption></figure></div></div>
 </li>
 <li>
 <span class="timeline-track" aria-hidden="true"><svg viewBox="0 0 56 100" preserveAspectRatio="none"><path d="M28 0 C6 22 50 28 28 50 C6 72 50 78 28 100"/></svg><span class="timeline-dot"></span></span>
@@ -72,7 +73,7 @@
 <li>
 <span class="timeline-track" aria-hidden="true"><svg viewBox="0 0 56 100" preserveAspectRatio="none"><path d="M28 0 C6 22 50 28 28 50 C6 72 50 78 28 100"/></svg><span class="timeline-dot"></span></span>
 <button class="itinerary-toggle" type="button" aria-expanded="false" aria-controls="itinerary-stop-4"><time datetime="12:30">12:30</time><span class="itinerary-heading"><strong>鶯歌老街午餐</strong><span>到老街享用中餐、稍作休息。</span></span><span class="toggle-icon" aria-hidden="true">＋</span></button>
-<div class="itinerary-details" id="itinerary-stop-4" aria-hidden="true" inert><div class="itinerary-details-inner"><p>到鶯歌老街享用中餐，在地用餐並稍作休息。</p><dl><dt>時間</dt><dd>12:30</dd><dt>門票／費用</dt><dd>老街免門票；餐費依各店家消費另計。</dd><dt>地址</dt><dd>新北市鶯歌區尖山埔路一帶（陶瓷老街徒步區）<a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%B6%AF%E6%AD%8C%E9%99%B6%E7%93%B7%E8%80%81%E8%A1%97" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/images%20(1).jpg" alt="鶯歌老街街景"><figcaption>鶯歌老街街景</figcaption></figure></div></div>
+<div class="itinerary-details" id="itinerary-stop-4" aria-hidden="true" inert><div class="itinerary-details-inner"><p>到鶯歌老街享用中餐，在地用餐並稍作休息。</p><dl><dt>時間</dt><dd>12:30</dd><dt>地址</dt><dd>新北市鶯歌區尖山埔路一帶（陶瓷老街徒步區）<a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%B6%AF%E6%AD%8C%E9%99%B6%E7%93%B7%E8%80%81%E8%A1%97" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/images%20(1).jpg" alt="鶯歌老街街景"><figcaption>鶯歌老街街景</figcaption></figure></div></div>
 </li>
 <li>
 <span class="timeline-track" aria-hidden="true"><svg viewBox="0 0 56 100" preserveAspectRatio="none"><path d="M28 0 C6 22 50 28 28 50 C6 72 50 78 28 100"/></svg><span class="timeline-dot"></span></span>
@@ -164,6 +165,27 @@
 <script>
 const introOverlay = document.querySelector(".intro-overlay");
 introOverlay.addEventListener("animationend", () => introOverlay.remove(), { once: true });
+
+const currentDatetime = document.querySelector("#current-datetime");
+const datetimeFormatter = new Intl.DateTimeFormat("zh-TW", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  weekday: "long",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hour12: false
+});
+
+function updateCurrentDatetime() {
+  const now = new Date();
+  currentDatetime.dateTime = now.toISOString();
+  currentDatetime.textContent = datetimeFormatter.format(now);
+}
+
+updateCurrentDatetime();
+window.setInterval(updateCurrentDatetime, 1000);
 
 const pageSections = Array.from(document.querySelectorAll("main section, footer[id]"));
 const sectionLinks = Array.from(document.querySelectorAll('nav a[href^="#"]:not(.nav-logo)'));
