@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://penguindylan.github.io/taojiji/image/taojiji-icon.png">
 <meta property="og:image:width" content="480">
 <meta property="og:image:height" content="480">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=google-form-registration">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
@@ -25,13 +25,16 @@
 </div>
 </div>
 <header class="hero">
-<h1>陶集吉</h1>
-<p class="sub">新北鶯歌一日遊</p>
-<p class="task">屬於你的陶瓷之旅</p>
+<h1 class="visually-hidden">陶集吉｜新北鶯歌親子陶藝一日遊</h1>
+<img class="hero-banner" src="image/陶集吉_Banner-03-collage_1920x640.jpg" srcset="image/陶集吉_Banner-03-collage_1920x640.jpg 1920w, image/陶集吉_Banner-03-collage_3840x1280.jpg 3840w" sizes="100vw" alt="陶集吉新北鶯歌一日遊：陶瓷博物館、老街美食與親子手拉坯">
+<div class="hero-actions">
+<a class="hero-cta" href="#product">探索一日行程 <span aria-hidden="true">↓</span></a>
+<a class="hero-cta hero-cta-demo" href="#registration">填寫需求問卷</a>
+</div>
 </header>
 <nav>
 <a class="nav-logo" href="#product" aria-label="陶集吉首頁"><img src="image/taojiji_logo.png" alt="陶集吉團隊 Logo"></a>
-<a href="#product">產品介紹</a><a href="#itinerary">行程</a><a href="#food-map">美食地圖</a><a href="#pricing">定價</a><a href="#contact">關於我們</a>
+<a href="#product">產品介紹</a><a href="#itinerary">行程</a><a href="#food-map">美食地圖</a><a href="#pricing">費用資訊</a><a href="#faq">常見問題</a><a href="#contact">關於我們</a>
 <time class="nav-datetime" id="current-datetime" aria-label="目前日期與時間"></time>
 </nav>
 <main>
@@ -41,14 +44,53 @@
 <img class="mission-logo" src="image/taojiji_logo.png" alt="陶集吉團隊 Logo">
 <div class="mission-copy">
 <h3>🏺 陶集吉・新北一日遊</h3>
-<p>我們以「親子」為主角，帶你走進擁有製陶工藝特色的鶯歌：</p>
+<p>為親子家庭規劃的鶯歌陶藝小旅行，串起陶瓷文化、老街散步與在地美食，讓大人小孩都能依自己的步調，體驗一座陶瓷小鎮的日常。</p>
 <ul>
-<li>👨‍👩‍👧 親子一起動手做陶，在創作中培養感情</li>
-<li>🍜 漫步鶯歌老街，品嚐在地美食</li>
-<li>🏛️ 參觀陶瓷博物館，認識歷史與製作過程</li>
+<li>👨‍👩‍👧 親子陶藝主題：規劃手拉坯體驗，實際內容與預約依店家確認</li>
+<li>🏛️ 陶瓷文化探索：走訪博物館，認識陶藝與地方故事</li>
+<li>🍜 老街慢遊：安排午餐與甜點時間，品嚐在地滋味</li>
 </ul>
-<p class="mission-note">玩樂同時，也富有教育意義 📍新北市鶯歌區</p>
+<p class="mission-note">適合親子同行・文化探索・老街散步　📍 新北市鶯歌區</p>
 </div>
+</div>
+<div class="product-stats" aria-label="一日遊行程資訊">
+<article class="product-stat"><span class="stat-icon" aria-hidden="true">◷</span><strong>約 <span>7</span> 小時</strong><span>09:30 – 16:30</span></article>
+<article class="product-stat"><span class="stat-icon" aria-hidden="true">⌖</span><strong><span data-stat="itinerary-stops">6</span> 個行程節點</strong><span>從火車站出發，漫遊鶯歌</span></article>
+<article class="product-stat"><span class="stat-icon" aria-hidden="true">♨</span><strong><span data-stat="food-places">14</span> 個美食地點</strong><span>打開互動地圖探索在地好味</span></article>
+</div>
+<div class="route-overview" aria-label="行程路線摘要">
+<div class="route-overview-heading"><span>一日路線</span><span>從文化體驗到老街散步</span></div>
+<ol class="route-stops">
+<li><time datetime="09:30">09:30</time><strong>車站集合</strong></li>
+<li><time datetime="10:00">10:00</time><strong>陶瓷博物館</strong></li>
+<li><time datetime="12:30">12:30</time><strong>老街午餐</strong></li>
+<li><time datetime="14:00">14:00</time><strong>新旺集瓷</strong></li>
+<li><time datetime="15:40">15:40</time><strong>阿嬤ㄟ豆花</strong></li>
+<li><time datetime="16:30">16:30</time><strong>返程</strong></li>
+</ol>
+</div>
+<div class="stamp-quest" id="stamp-quest">
+<div class="stamp-quest-heading">
+<span class="stamp-eyebrow">TAO JI JI · YINGGE</span>
+<h3>集章卡・闖關活動</h3>
+<p>跟著卡片探索鶯歌，把陶瓷小旅行變成一場沿途收集回憶的闖關任務。</p>
+</div>
+<div class="stamp-steps">
+<article class="stamp-step"><span>01</span><div><h4>收集 7 個旅程印章</h4><p>從鶯歌火車站、陶瓷博物館、透明景觀電梯、老街午餐、新旺集瓷、阿嬤ㄟ豆花，到「平安回家」，一路留下旅行紀錄。</p></div></article>
+<article class="stamp-step"><span>02</span><div><h4>完成卡背 3 個小任務</h4><p>找一根鶯歌的煙囪、找一個陶瓷圖案，再和你的作品合照，邊玩邊觀察鶯歌的陶藝風景。</p></div></article>
+<article class="stamp-step"><span>03</span><div><h4>收藏你的陶瓷旅行</h4><p>在卡片留下姓名與日期，集章、探索、拍照，為這趟親子旅行留下紀念。</p></div></article>
+</div>
+<div class="stamp-card-gallery" aria-label="陶集吉集章卡正反面">
+<figure class="stamp-card">
+<img src="image/陶集吉_集章卡_正面.png" alt="集章卡正面：鶯歌陶瓷小旅行七站集章，包含火車站、陶瓷博物館、景觀電梯、老街午餐、新旺集瓷、阿嬤ㄟ豆花與平安回家" loading="lazy">
+<figcaption>集章卡正面｜七站收集陶瓷好日子</figcaption>
+</figure>
+<figure class="stamp-card">
+<img src="image/陶集吉_集章卡_背面.png" alt="集章卡背面：尋找鶯歌煙囪、尋找陶瓷圖案、與自己的作品合照三項小任務" loading="lazy">
+<figcaption>集章卡背面｜三個沿途探索小任務</figcaption>
+</figure>
+</div>
+<p class="stamp-note">集章卡未標示活動期間、各站集章設置與兌換獎勵；實際參與方式請依現場公告或洽陶集吉確認。</p>
 </div>
 </section>
 <section id="itinerary">
@@ -125,15 +167,61 @@
 </div>
 </section>
 <section id="pricing">
-<h2><span class="section-label">定價</span></h2>
-<p class="pricing-pending">待定</p>
+<h2><span class="section-label">費用資訊</span></h2>
+<p class="pricing-intro">先掌握行程中可能的支出；套裝行程費用尚未公告，請以各場館與店家最新資訊為準。</p>
+<div class="pricing-cards">
+<article class="pricing-card pricing-ticket"><span class="pricing-icon" aria-hidden="true">🏛️</span><p>陶瓷博物館全票</p><strong>NT$80</strong><span>優待與免票資格依館方公告</span></article>
+<article class="pricing-card"><span class="pricing-icon" aria-hidden="true">🏺</span><p>陶藝體驗</p><strong>依現場方案</strong><span>體驗內容與費用請洽店家</span></article>
+<article class="pricing-card"><span class="pricing-icon" aria-hidden="true">🍜</span><p>午餐與點心</p><strong>依店家消費</strong><span>可依喜好自由選擇餐點</span></article>
+</div>
+<p class="pricing-note">博物館票價為目前行程資料所列全票價格；交通、購物及個人消費另計。</p>
+</section>
+<section id="faq">
+<h2><span class="section-label">常見問題 Q&amp;A</span></h2>
+<p class="faq-intro">出發前先看看大家常問的行程與費用資訊。</p>
+<div class="faq-list">
+<details class="faq-item">
+<summary>行程幾點開始、幾點結束？</summary>
+<p>行程預計 09:30 在鶯歌火車站集合，約 16:30 結束。<a href="#itinerary">查看完整行程</a></p>
+</details>
+<details class="faq-item">
+<summary>陶瓷博物館門票是多少？</summary>
+<p>目前行程資料列出的全票為 NT$80；優待及免票資格請以館方公告為準。</p>
+</details>
+<details class="faq-item">
+<summary>手拉坯體驗有包含在行程或費用裡嗎？</summary>
+<p>手拉坯是行程的體驗主題之一，但是否包含於套裝、可預約時段及費用尚未確認，請先向店家洽詢。</p>
+</details>
+<details class="faq-item">
+<summary>要去哪裡查看鶯歌在地美食？</summary>
+<p>可至<a href="#food-map">美食地圖</a>查看地點清單並點選地圖標記；目前整理 14 個美食地點。</p>
+</details>
+<details class="faq-item">
+<summary>套裝行程價格或優惠有公告嗎？</summary>
+<p>目前尚未公告套裝價格與促銷優惠。博物館門票、陶藝體驗、餐飲及交通等費用請分別確認，詳情可參考<a href="#pricing">費用資訊</a>。</p>
+</details>
+</div>
+</section>
+<section id="registration">
+<h2><span class="section-label">課堂專案｜行程需求問卷</span></h2>
+<div class="registration-notice" role="note">
+<strong>本頁為學校專案問卷，不是實際旅遊報名。</strong>
+<p>請勿填寫姓名、電話、Email 等個人資料。測試此連結時 Google 要求登入，因此目前還不能視為可匿名填答；表單擁有者需允許任何知道連結的人回覆，並關閉電子郵件收集與登入限制。</p>
+</div>
+<div class="registration-card" role="group" aria-labelledby="registration-form-title">
+<div class="registration-heading">
+<span class="registration-eyebrow">SCHOOL PROJECT SURVEY</span>
+<h3 id="registration-form-title">分享你對鶯歌一日遊的想法</h3>
+<p>問卷由 Google 表單提供。請先確認表單已連結至專案試算表，並只詢問不具識別性的旅遊偏好資料。</p>
+</div>
+<a class="registration-submit" href="https://docs.google.com/forms/d/e/1FAIpQLSclbFfBKrzFCrsW6_NclU2vk8vbNCHOPrp3_LXHIhSmJqPGXA/viewform?usp=header" target="_blank" rel="noopener noreferrer">開啟需求問卷</a>
+</div>
 </section>
 </main>
 <footer id="contact">
 <p class="footer-brand">陶集吉｜新北一日遊</p>
 <p>聯絡我們<br>Instagram：<a href="https://www.instagram.com/taojiji11544" target="_blank" rel="noopener noreferrer">@taojiji11544</a></p>
 <p>Email：<a href="mailto:pigdylan@gmail.com">pigdylan@gmail.com</a></p>
-<p>手機：<a href="tel:0917673000">0917-673-000</a></p>
 <p class="copyright">Copyright © 2026 陶集吉｜學校分組專案。All rights reserved.</p>
 </footer>
 <aside class="site-assistant" aria-label="鶯歌行程問答小幫手">
@@ -229,6 +317,8 @@ pageSections.forEach((section) => sectionObserver.observe(section));
 const foodMapStatus = document.querySelector("#food-map-status");
 const foodPlaceLinks = Array.from(document.querySelectorAll(".food-place-link"));
 const foodPlaceMarkers = new Map();
+document.querySelector('[data-stat="food-places"]').textContent = String(foodPlaceLinks.length);
+document.querySelector('[data-stat="itinerary-stops"]').textContent = String(document.querySelectorAll(".itinerary-list li:not(.itinerary-finish)").length);
 
 if (!window.L) {
   foodMapStatus.textContent = "互動地圖載入失敗，請檢查網路連線，或改用下方 Google My Maps 原始地圖。";
@@ -390,6 +480,7 @@ assistantPanel.addEventListener("keydown", (event) => {
     assistantLauncher.focus();
   }
 });
+
 </script>
 </body>
 </html>
