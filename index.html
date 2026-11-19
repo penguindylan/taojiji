@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://penguindylan.github.io/taojiji/image/taojiji-icon.png">
 <meta property="og:image:width" content="480">
 <meta property="og:image:height" content="480">
-<link rel="stylesheet" href="style.css?v=google-form-registration">
+<link rel="stylesheet" href="style.css?v=group-pricing">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
@@ -29,13 +29,13 @@
 <img class="hero-banner" src="image/陶集吉_Banner-03-collage_1920x640.jpg" srcset="image/陶集吉_Banner-03-collage_1920x640.jpg 1920w, image/陶集吉_Banner-03-collage_3840x1280.jpg 3840w" sizes="100vw" alt="陶集吉新北鶯歌一日遊：陶瓷博物館、老街美食與親子手拉坯">
 <div class="hero-actions">
 <a class="hero-cta" href="#product">探索一日行程 <span aria-hidden="true">↓</span></a>
-<a class="hero-cta hero-cta-demo" href="#registration">填寫需求問卷</a>
 </div>
 </header>
 <nav>
 <a class="nav-logo" href="#product" aria-label="陶集吉首頁"><img src="image/taojiji_logo.png" alt="陶集吉團隊 Logo"></a>
 <a href="#product">產品介紹</a><a href="#itinerary">行程</a><a href="#food-map">美食地圖</a><a href="#pricing">費用資訊</a><a href="#faq">常見問題</a><a href="#contact">關於我們</a>
 <time class="nav-datetime" id="current-datetime" aria-label="目前日期與時間"></time>
+<a class="nav-registration" href="https://docs.google.com/forms/d/e/1FAIpQLSclbFfBKrzFCrsW6_NclU2vk8vbNCHOPrp3_LXHIhSmJqPGXA/viewform?usp=header" target="_blank" rel="noopener noreferrer">馬上報名</a>
 </nav>
 <main>
 <section id="product">
@@ -168,13 +168,15 @@
 </section>
 <section id="pricing">
 <h2><span class="section-label">費用資訊</span></h2>
-<p class="pricing-intro">先掌握行程中可能的支出；套裝行程費用尚未公告，請以各場館與店家最新資訊為準。</p>
+<p class="pricing-intro">一般價格依同行人數計算，早鳥以每人原價 NT$1,199 打 9 折。</p>
+<div class="pricing-early-bird"><span>早鳥優惠・原價 NT$1,199／人，9 折</span><strong>NT$1,079<small>／人</small></strong></div>
 <div class="pricing-cards">
-<article class="pricing-card pricing-ticket"><span class="pricing-icon" aria-hidden="true">🏛️</span><p>陶瓷博物館全票</p><strong>NT$80</strong><span>優待與免票資格依館方公告</span></article>
-<article class="pricing-card"><span class="pricing-icon" aria-hidden="true">🏺</span><p>陶藝體驗</p><strong>依現場方案</strong><span>體驗內容與費用請洽店家</span></article>
-<article class="pricing-card"><span class="pricing-icon" aria-hidden="true">🍜</span><p>午餐與點心</p><strong>依店家消費</strong><span>可依喜好自由選擇餐點</span></article>
+<article class="pricing-card"><p>兩人同行</p><strong>NT$2,399</strong><span>約 NT$1,200／人</span></article>
+<article class="pricing-card"><p>三人同行</p><strong>NT$3,499</strong><span>約 NT$1,166／人</span></article>
+<article class="pricing-card"><p>四人同行</p><strong>NT$4,599</strong><span>約 NT$1,150／人</span></article>
+<article class="pricing-card"><p>五人同行</p><strong>NT$5,599</strong><span>約 NT$1,120／人</span></article>
 </div>
-<p class="pricing-note">博物館票價為目前行程資料所列全票價格；交通、購物及個人消費另計。</p>
+<p class="pricing-note">費用包含專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花；不含交通與午餐。</p>
 </section>
 <section id="faq">
 <h2><span class="section-label">常見問題 Q&amp;A</span></h2>
@@ -186,11 +188,11 @@
 </details>
 <details class="faq-item">
 <summary>陶瓷博物館門票是多少？</summary>
-<p>目前行程資料列出的全票為 NT$80；優待及免票資格請以館方公告為準。</p>
+<p>陶瓷博物館門票已包含在行程費用中；成人全票 NT$80，未滿 12 歲兒童免票，實際資格依館方規定為準。</p>
 </details>
 <details class="faq-item">
 <summary>手拉坯體驗有包含在行程或費用裡嗎？</summary>
-<p>手拉坯是行程的體驗主題之一，但是否包含於套裝、可預約時段及費用尚未確認，請先向店家洽詢。</p>
+<p>有，行程費用包含手拉坯 DIY 與專人導覽。</p>
 </details>
 <details class="faq-item">
 <summary>要去哪裡查看鶯歌在地美食？</summary>
@@ -198,23 +200,19 @@
 </details>
 <details class="faq-item">
 <summary>套裝行程價格或優惠有公告嗎？</summary>
-<p>目前尚未公告套裝價格與促銷優惠。博物館門票、陶藝體驗、餐飲及交通等費用請分別確認，詳情可參考<a href="#pricing">費用資訊</a>。</p>
+<p>一般價格為兩人 NT$2,399、三人 NT$3,499、四人 NT$4,599、五人 NT$5,599；早鳥原價 NT$1,199／人打 9 折，優惠價 NT$1,079／人。費用包含專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花，不含交通與午餐，詳情可參考<a href="#pricing">費用資訊</a>。</p>
 </details>
 </div>
 </section>
 <section id="registration">
-<h2><span class="section-label">課堂專案｜行程需求問卷</span></h2>
-<div class="registration-notice" role="note">
-<strong>本頁為學校專案問卷，不是實際旅遊報名。</strong>
-<p>請勿填寫姓名、電話、Email 等個人資料。測試此連結時 Google 要求登入，因此目前還不能視為可匿名填答；表單擁有者需允許任何知道連結的人回覆，並關閉電子郵件收集與登入限制。</p>
-</div>
+<h2><span class="section-label">線上報名</span></h2>
 <div class="registration-card" role="group" aria-labelledby="registration-form-title">
 <div class="registration-heading">
-<span class="registration-eyebrow">SCHOOL PROJECT SURVEY</span>
-<h3 id="registration-form-title">分享你對鶯歌一日遊的想法</h3>
-<p>問卷由 Google 表單提供。請先確認表單已連結至專案試算表，並只詢問不具識別性的旅遊偏好資料。</p>
+<span class="registration-eyebrow">TAO JI JI · YINGGE DAY TOUR</span>
+<h3 id="registration-form-title">報名鶯歌親子一日遊</h3>
+<p>請透過線上表單填寫同行人數與行程偏好，完成後送出報名資料。</p>
 </div>
-<a class="registration-submit" href="https://docs.google.com/forms/d/e/1FAIpQLSclbFfBKrzFCrsW6_NclU2vk8vbNCHOPrp3_LXHIhSmJqPGXA/viewform?usp=header" target="_blank" rel="noopener noreferrer">開啟需求問卷</a>
+<a class="registration-submit" href="https://docs.google.com/forms/d/e/1FAIpQLSclbFfBKrzFCrsW6_NclU2vk8vbNCHOPrp3_LXHIhSmJqPGXA/viewform?usp=header" target="_blank" rel="noopener noreferrer">前往填寫報名表</a>
 </div>
 </section>
 </main>
@@ -428,8 +426,8 @@ function answerAssistantQuestion(question) {
   if (/行程|幾點|時間|幾點集合|集合/.test(text)) {
     return { text: "行程是 09:30 鶯歌火車站集合、10:00 陶瓷博物館、途中經過鶯歌透明景觀電梯、12:30 老街午餐、14:00 新旺集瓷、15:40 阿嬤ㄟ豆花，16:30 結束。", link: { label: "查看完整行程", url: "#itinerary" } };
   }
-  if (/門票|票價|多少錢|費用|花費|免費/.test(text)) {
-    return { text: "陶瓷博物館全票 NT$80，優待與免票資格依館方公告為準；透明景觀電梯與老街免門票。新旺集瓷逛店免門票，體驗或購物、餐飲費用另計。" };
+  if (/早鳥|套裝|價格|門票|票價|多少錢|費用|花費|免費/.test(text)) {
+    return { text: "一般價格為兩人 NT$2,399（約 NT$1,200／人）、三人 NT$3,499（約 NT$1,166／人）、四人 NT$4,599（約 NT$1,150／人）、五人 NT$5,599（約 NT$1,120／人）；早鳥原價 NT$1,199／人打 9 折，優惠價 NT$1,079／人。費用包含專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花，不含交通與午餐。" };
   }
   if (/博物館|陶博/.test(text) && /地址|在哪|地點|地圖|怎麼去/.test(text)) {
     return { text: "鶯歌陶瓷博物館地址：新北市鶯歌區文化路 200 號。", link: { label: "開啟 Google 地圖", url: "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E9%B6%AF%E6%AD%8C%E9%99%B6%E7%93%B7%E5%8D%9A%E7%89%A9%E9%A4%A8" } };
