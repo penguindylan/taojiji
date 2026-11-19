@@ -168,8 +168,8 @@
 </section>
 <section id="pricing">
 <h2><span class="section-label">費用資訊</span></h2>
-<p class="pricing-intro">一般價格依同行人數計算，早鳥以每人原價 NT$1,199 打 9 折。</p>
-<div class="pricing-early-bird"><span>早鳥優惠・原價 NT$1,199／人，9 折</span><strong>NT$1,079<small>／人</small></strong></div>
+<p class="pricing-intro">一般價格依同行人數計算，早鳥以每人原價 NT$1,199 打 9 折（2 人以上報名）。</p>
+<div class="pricing-early-bird"><span>早鳥優惠・原價 NT$1,199／人，9 折（2 人以上報名）</span><strong>NT$1,079<small>／人</small></strong></div>
 <div class="pricing-cards">
 <article class="pricing-card"><p>兩人同行</p><strong>NT$2,399</strong><span>約 NT$1,200／人</span></article>
 <article class="pricing-card"><p>三人同行</p><strong>NT$3,499</strong><span>約 NT$1,166／人</span></article>
@@ -200,7 +200,7 @@
 </details>
 <details class="faq-item">
 <summary>套裝行程價格或優惠有公告嗎？</summary>
-<p>一般價格為兩人 NT$2,399、三人 NT$3,499、四人 NT$4,599、五人 NT$5,599；早鳥原價 NT$1,199／人打 9 折，優惠價 NT$1,079／人。費用包含專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花，不含交通與午餐，詳情可參考<a href="#pricing">費用資訊</a>。</p>
+<p>一般價格為兩人 NT$2,399、三人 NT$3,499、四人 NT$4,599、五人 NT$5,599；早鳥原價 NT$1,199／人打 9 折，優惠價 NT$1,079／人（2 人以上報名）。費用包含專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花，不含交通與午餐，詳情可參考<a href="#pricing">費用資訊</a>。</p>
 </details>
 </div>
 </section>
@@ -427,7 +427,7 @@ function answerAssistantQuestion(question) {
     return { text: "行程是 09:30 鶯歌火車站集合、10:00 陶瓷博物館、途中經過鶯歌透明景觀電梯、12:30 老街午餐、14:00 新旺集瓷、15:40 阿嬤ㄟ豆花，16:30 結束。", link: { label: "查看完整行程", url: "#itinerary" } };
   }
   if (/早鳥|套裝|價格|門票|票價|多少錢|費用|花費|免費/.test(text)) {
-    return { text: "一般價格為兩人 NT$2,399（約 NT$1,200／人）、三人 NT$3,499（約 NT$1,166／人）、四人 NT$4,599（約 NT$1,150／人）、五人 NT$5,599（約 NT$1,120／人）；早鳥原價 NT$1,199／人打 9 折，優惠價 NT$1,079／人。費用包含專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花，不含交通與午餐。" };
+    return { text: "一般價格為兩人 NT$2,399（約 NT$1,200／人）、三人 NT$3,499（約 NT$1,166／人）、四人 NT$4,599（約 NT$1,150／人）、五人 NT$5,599（約 NT$1,120／人）；早鳥原價 NT$1,199／人打 9 折，優惠價 NT$1,079／人（2 人以上報名）。費用包含專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花，不含交通與午餐。" };
   }
   if (/博物館|陶博/.test(text) && /地址|在哪|地點|地圖|怎麼去/.test(text)) {
     return { text: "鶯歌陶瓷博物館地址：新北市鶯歌區文化路 200 號。", link: { label: "開啟 Google 地圖", url: "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E9%B6%AF%E6%AD%8C%E9%99%B6%E7%93%B7%E5%8D%9A%E7%89%A9%E9%A4%A8" } };
