@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://penguindylan.github.io/taojiji/image/taojiji-icon.png">
 <meta property="og:image:width" content="480">
 <meta property="og:image:height" content="480">
-<link rel="stylesheet" href="style.css?v=hero-no-crop">
+<link rel="stylesheet" href="style.css?v=hero-carousel-aligned-v12">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
@@ -26,7 +26,23 @@
 </div>
 <header class="hero">
 <h1 class="visually-hidden">陶集吉｜新北鶯歌親子陶藝一日遊</h1>
-<img class="hero-banner" src="image/陶集吉_Banner-03-collage_1920x640.jpg" width="1920" height="640" alt="陶集吉新北鶯歌一日遊：陶瓷博物館、老街美食與親子手拉坯">
+<div class="hero-carousel" aria-label="鶯歌一日遊照片輪播">
+<div class="hero-banner-viewport">
+<img class="hero-banner hero-banner-previous" alt="" aria-hidden="true" hidden>
+<img class="hero-banner hero-banner-current" src="image/陶集吉_Banner-03-collage.jpg" width="1920" height="640" alt="鶯歌陶瓷博物館、陶瓷老街與新旺集瓷行程 Banner" fetchpriority="high">
+<a class="hero-banner-cta" data-slide="0" href="https://docs.google.com/forms/d/e/1FAIpQLSclbFfBKrzFCrsW6_NclU2vk8vbNCHOPrp3_LXHIhSmJqPGXA/viewform?usp=header" target="_blank" rel="noopener noreferrer" aria-label="立即報名，前往線上報名表" hidden></a>
+</div>
+<div class="hero-carousel-controls">
+<button class="hero-carousel-arrow" type="button" data-carousel-step="-1" aria-label="上一張照片">‹</button>
+<div class="hero-carousel-dots" aria-label="選擇照片">
+<button type="button" data-carousel-slide="0" aria-label="第 1 張照片" aria-current="true"></button>
+<button type="button" data-carousel-slide="1" aria-label="第 2 張照片"></button>
+<button type="button" data-carousel-slide="2" aria-label="第 3 張照片"></button>
+<button type="button" data-carousel-slide="3" aria-label="第 4 張照片"></button>
+</div>
+<button class="hero-carousel-arrow" type="button" data-carousel-step="1" aria-label="下一張照片">›</button>
+</div>
+</div>
 <div class="hero-actions">
 <a class="hero-cta" href="#product">探索一日行程 <span aria-hidden="true">↓</span></a>
 </div>
@@ -34,7 +50,6 @@
 <nav>
 <a class="nav-logo" href="#product" aria-label="陶集吉首頁"><img src="image/taojiji_logo.png" alt="陶集吉團隊 Logo"></a>
 <a href="#product">產品介紹</a><a href="#itinerary">行程</a><a href="#food-map">美食地圖</a><a href="#pricing">費用資訊</a><a href="#faq">常見問題</a><a href="#contact">關於我們</a>
-<time class="nav-datetime" id="current-datetime" aria-label="目前日期與時間"></time>
 <a class="nav-registration" href="https://docs.google.com/forms/d/e/1FAIpQLSclbFfBKrzFCrsW6_NclU2vk8vbNCHOPrp3_LXHIhSmJqPGXA/viewform?usp=header" target="_blank" rel="noopener noreferrer">馬上報名</a>
 </nav>
 <main>
@@ -66,7 +81,7 @@
 <li><time datetime="12:30">12:30</time><strong>老街午餐</strong></li>
 <li><time datetime="14:00">14:00</time><strong>新旺集瓷</strong></li>
 <li><time datetime="15:40">15:40</time><strong>阿嬤ㄟ豆花</strong></li>
-<li><time datetime="16:30">16:30</time><strong>返程</strong></li>
+<li><time datetime="16:30">16:30</time><strong>火車站解散</strong></li>
 </ol>
 </div>
 <div class="stamp-quest" id="stamp-quest">
@@ -76,7 +91,7 @@
 <p>跟著卡片探索鶯歌，把陶瓷小旅行變成一場沿途收集回憶的闖關任務。</p>
 </div>
 <div class="stamp-steps">
-<article class="stamp-step"><span>01</span><div><h4>收集 7 個旅程印章</h4><p>從鶯歌火車站、陶瓷博物館、透明景觀電梯、老街午餐、新旺集瓷、阿嬤ㄟ豆花，到「平安回家」，一路留下旅行紀錄。</p></div></article>
+<article class="stamp-step"><span>01</span><div><h4>收集 7 個旅程印章</h4><p>從鶯歌火車站、陶瓷博物館、透明景觀電梯、老街午餐、新旺集瓷、阿嬤ㄟ豆花，到回到火車站解散並收下「平安回家」章，一路留下旅行紀錄。</p></div></article>
 <article class="stamp-step"><span>02</span><div><h4>完成卡背 3 個小任務</h4><p>找一根鶯歌的煙囪、找一個陶瓷圖案，再和你的作品合照，邊玩邊觀察鶯歌的陶藝風景。</p></div></article>
 <article class="stamp-step"><span>03</span><div><h4>收藏你的陶瓷旅行</h4><p>在卡片留下姓名與日期，集章、探索、拍照，為這趟親子旅行留下紀念。</p></div></article>
 </div>
@@ -129,32 +144,40 @@
 </li>
 <li class="itinerary-finish">
 <span class="timeline-track" aria-hidden="true"><svg viewBox="0 0 56 100" preserveAspectRatio="none"><path d="M28 0 C6 22 50 28 28 50 C6 72 50 78 28 100"/></svg><span class="timeline-dot"></span><svg class="timeline-tip" viewBox="0 0 56 44" preserveAspectRatio="none"><path d="M28 0 L28 15 M10 5 L28 42 L46 5"/></svg></span>
-<button class="itinerary-toggle" type="button" aria-expanded="false" aria-controls="itinerary-stop-7"><time datetime="16:30">16:30</time><span class="itinerary-heading"><strong>行程結束</strong><span>結束一天的鶯歌行程。</span></span><span class="toggle-icon" aria-hidden="true">＋</span></button>
-<div class="itinerary-details" id="itinerary-stop-7" aria-hidden="true" inert><div class="itinerary-details-inner"><p>16:30 結束一天的鶯歌行程。</p><dl><dt>時間</dt><dd>16:30</dd><dt>地址</dt><dd>新北市鶯歌區文化路 68-1 號（鶯歌火車站）<a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%B6%AF%E6%AD%8C%E7%81%AB%E8%BB%8A%E7%AB%99" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/台鐵鶯歌火車站.jpg" alt="台鐵鶯歌火車站"><figcaption>返程集合點：台鐵鶯歌火車站</figcaption></figure></div></div>
+<button class="itinerary-toggle" type="button" aria-expanded="false" aria-controls="itinerary-stop-7"><time datetime="16:30">16:30</time><span class="itinerary-heading"><strong>鶯歌火車站解散</strong><span>回到車站集合點，確認同行成員後解散返家。</span></span><span class="toggle-icon" aria-hidden="true">＋</span></button>
+<div class="itinerary-details" id="itinerary-stop-7" aria-hidden="true" inert><div class="itinerary-details-inner"><p>約 16:30 回到鶯歌火車站解散。請預留返程交通時間，並在離開前確認同行成員與隨身物品。</p><dl><dt>時間</dt><dd>約 16:30 解散</dd><dt>地址</dt><dd>新北市鶯歌區文化路 68-1 號（鶯歌火車站）<a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%B6%AF%E6%AD%8C%E7%81%AB%E8%BB%8A%E7%AB%99" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></dd></dl><figure><img src="image/台鐵鶯歌火車站.jpg" alt="台鐵鶯歌火車站"><figcaption>解散地點：台鐵鶯歌火車站</figcaption></figure></div></div>
 </li>
 </ol>
 </div>
 </section>
 <section id="food-map">
 <h2><span class="section-label">美食地圖</span></h2>
+<p class="food-map-intro">依用餐情境整理店家類型；點選店名即可在地圖上查看位置。餐點供應、營業時間與店家資訊請以現場或官方公告為準。</p>
 <div class="food-map-layout">
 <div class="food-map-places">
-<h3>地圖中的地點</h3>
+<h3>依類型探索 14 個地點</h3>
+<h4 class="food-category-title">正餐・主食</h4>
+<ul>
+<li><button class="food-place-link" type="button" data-lat="24.9517985" data-lng="121.3496689">Teaday喝茶天－茶家食堂－鶯歌</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9518809" data-lng="121.3487872">HAN'S BURGER 美式手作漢堡專賣店</button></li>
+<li><button class="food-place-link" type="button" data-lat="24.9521165" data-lng="121.347786">鶯歌甕仔麵</button></li>
+</ul>
+<h4 class="food-category-title">咖啡・茶飲・烘焙</h4>
 <ul>
 <li><button class="food-place-link" type="button" data-lat="24.9517389" data-lng="121.3474285">川流茶空間</button></li>
 <li><button class="food-place-link" type="button" data-lat="24.9514261" data-lng="121.3474682">Soleil croissant 可頌咖啡廳 鶯歌老街店</button></li>
 <li><button class="food-place-link" type="button" data-lat="24.9512485" data-lng="121.3471697">Lilli's Mill 酸種麵包 Sourdough Bread</button></li>
+</ul>
+<h4 class="food-category-title">甜點・點心・街邊小吃</h4>
+<ul>
 <li><button class="food-place-link" type="button" data-lat="24.9510496" data-lng="121.34715">阿嬤ㄟ豆花</button></li>
 <li><button class="food-place-link" type="button" data-lat="24.9509482" data-lng="121.347215">甜不辣、臭豆腐、大腸麵線</button></li>
 <li><button class="food-place-link" type="button" data-lat="24.9508952" data-lng="121.3486912">小豆芽滷味</button></li>
 <li><button class="food-place-link" type="button" data-lat="24.9511519" data-lng="121.3485571">陶瓷大餅</button></li>
 <li><button class="food-place-link" type="button" data-lat="24.9511586" data-lng="121.3486269">客家手工麻糬</button></li>
 <li><button class="food-place-link" type="button" data-lat="24.95096" data-lng="121.348744">阿蓮脆皮紅豆餅</button></li>
-<li><button class="food-place-link" type="button" data-lat="24.9517985" data-lng="121.3496689">Teaday喝茶天－茶家食堂－鶯歌</button></li>
 <li><button class="food-place-link" type="button" data-lat="24.9518252" data-lng="121.3488795">古早味現炸咔哩咔哩</button></li>
-<li><button class="food-place-link" type="button" data-lat="24.9518809" data-lng="121.3487872">HAN'S BURGER 美式手作漢堡專賣店</button></li>
 <li><button class="food-place-link" type="button" data-lat="24.9521093" data-lng="121.3483865">綿綿古早味</button></li>
-<li><button class="food-place-link" type="button" data-lat="24.9521165" data-lng="121.347786">鶯歌甕仔麵</button></li>
 </ul>
 </div>
 <div class="food-map-column">
@@ -168,39 +191,47 @@
 </section>
 <section id="pricing">
 <h2><span class="section-label">費用資訊</span></h2>
-<p class="pricing-intro">一般價格依同行人數計算，早鳥以每人原價 NT$1,199 打 9 折（2 人以上報名）。</p>
-<div class="pricing-early-bird"><span>早鳥優惠・原價 NT$1,199／人，9 折（2 人以上報名）</span><strong>NT$1,079<small>／人</small></strong></div>
+<p class="pricing-intro">兩人方案每人 NT$999；三至五人同行另有團體優惠，兩人成團。早鳥優惠依報名人數計算團體總價，詳見下方方案。</p>
+<div class="pricing-early-bird"><span>最低兩人成團・依同行人數採團體定價</span><strong>早鳥 NT$1,799<small>／兩人團起</small></strong></div>
 <div class="pricing-cards">
-<article class="pricing-card"><p>兩人同行</p><strong>NT$2,399</strong><span>約 NT$1,200／人</span></article>
-<article class="pricing-card"><p>三人同行</p><strong>NT$3,499</strong><span>約 NT$1,166／人</span></article>
-<article class="pricing-card"><p>四人同行</p><strong>NT$4,599</strong><span>約 NT$1,150／人</span></article>
-<article class="pricing-card"><p>五人同行</p><strong>NT$5,599</strong><span>約 NT$1,120／人</span></article>
+<article class="pricing-card"><p>兩人同行</p><strong>NT$1,998</strong><span>NT$999／人</span><span class="pricing-early-total">早鳥 NT$1,799</span></article>
+<article class="pricing-card"><p>三人同行</p><strong>NT$2,799</strong><span>平均 NT$933／人</span><span class="pricing-early-total">早鳥 NT$2,699</span></article>
+<article class="pricing-card"><p>四人同行</p><strong>NT$3,699</strong><span>平均約 NT$925／人</span><span class="pricing-early-total">早鳥 NT$3,599</span></article>
+<article class="pricing-card"><p>五人同行</p><strong>NT$4,599</strong><span>平均約 NT$920／人</span><span class="pricing-early-total">早鳥 NT$4,499</span></article>
 </div>
 <p class="pricing-note">費用包含專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花；不含交通與午餐。</p>
 </section>
 <section id="faq">
 <h2><span class="section-label">常見問題 Q&amp;A</span></h2>
-<p class="faq-intro">出發前先看看大家常問的行程與費用資訊。</p>
+<p class="faq-intro">整理集合解散、交通、行程安排、親子參與與費用細節，方便出發前逐項確認；若遇店家或場館臨時調整，請以現場公告及報名通知為準。</p>
 <div class="faq-list">
 <details class="faq-item">
 <summary>行程幾點開始、幾點結束？</summary>
-<p>行程預計 09:30 在鶯歌火車站集合，約 16:30 結束。<a href="#itinerary">查看完整行程</a></p>
+<p>預計 09:30 在鶯歌火車站集合，依序前往陶瓷博物館、老街及行程中的體驗與用餐點，約 16:30 回到鶯歌火車站解散。各站時間是規劃參考，實際停留與返站時間可能受交通、人潮、天候或現場安排影響；建議預留返程彈性。<a href="#itinerary">查看完整行程</a></p>
 </details>
 <details class="faq-item">
-<summary>陶瓷博物館門票是多少？</summary>
-<p>陶瓷博物館門票已包含在行程費用中；成人全票 NT$80，未滿 12 歲兒童免票，實際資格依館方規定為準。</p>
+<summary>集合和解散地點在哪裡？搭火車方便嗎？</summary>
+<p>集合地點為台鐵鶯歌火車站，行程結束後也會回到同一車站解散。火車站地址為新北市鶯歌區文化路 68-1 號；建議先查詢出發地到鶯歌的班次，並在集合前確認月台、車次和步行時間。若自行開車或搭乘其他交通工具，接駁與停車安排請先依報名通知確認，網站目前未承諾提供交通接送。<a href="#itinerary">查看集合與解散資訊</a></p>
 </details>
 <details class="faq-item">
-<summary>手拉坯體驗有包含在行程或費用裡嗎？</summary>
-<p>有，行程費用包含手拉坯 DIY 與專人導覽。</p>
+<summary>陶瓷博物館門票、手拉坯體驗包含在費用裡嗎？</summary>
+<p>目前費用說明列有專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花。博物館成人全票標示 NT$80；兒童或其他票種的資格、手拉坯體驗內容與可參加年齡，可能依館方、合作店家及當日安排不同，請以報名通知或現場規定為準。陶藝作品是否燒製、寄送與完成時間，也建議報名前確認。<a href="#pricing">查看費用包含項目</a></p>
 </details>
 <details class="faq-item">
-<summary>要去哪裡查看鶯歌在地美食？</summary>
-<p>可至<a href="#food-map">美食地圖</a>查看地點清單並點選地圖標記；目前整理 14 個美食地點。</p>
+<summary>行程適合帶小朋友參加嗎？需要準備什麼？</summary>
+<p>行程以親子陶藝與文化散步為主，包含博物館參觀、老街步行和手作體驗；是否適合個別孩子，仍請依年齡、步行耐受度與體驗店家規範評估。建議穿著好走的鞋、攜帶飲水、防曬或雨具，並由家長全程陪同孩子。若有推車、無障礙通行、特殊照護或過敏需求，請在報名前先詢問主辦方確認場地與安排。</p>
 </details>
 <details class="faq-item">
-<summary>套裝行程價格或優惠有公告嗎？</summary>
-<p>一般價格為兩人 NT$2,399、三人 NT$3,499、四人 NT$4,599、五人 NT$5,599；早鳥原價 NT$1,199／人打 9 折，優惠價 NT$1,079／人（2 人以上報名）。費用包含專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花，不含交通與午餐，詳情可參考<a href="#pricing">費用資訊</a>。</p>
+<summary>午餐會在哪裡吃？飲食需求可以事先安排嗎？</summary>
+<p>行程安排約 12:30 在鶯歌老街用餐，午餐費用不包含在套裝行程中，餐點由參加者依喜好自行選擇。美食地圖依正餐、咖啡烘焙及點心小吃分類，可先查看附近選擇；店家菜單、素食選項、過敏原與營業狀況可能變動，請直接向店家確認。若團體有素食、食物過敏或其他飲食限制，建議事先告知同行者並預留用餐時間。</p>
+</details>
+<details class="faq-item">
+<summary>行程費用是多少？哪些項目不包含？</summary>
+<p>兩人方案為 NT$1,998（NT$999／人）；三人 NT$2,799、四人 NT$3,699、五人 NT$4,599，三至五人方案平均每人約 NT$920–933。早鳥團體價維持兩人 NT$1,799、三人 NT$2,699、四人 NT$3,599、五人 NT$4,499。最低兩人成團。費用包含專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花；不含往返交通與午餐，購物或額外體驗也不在已列項目內。優惠期限、名額、付款方式、取消或改期規則請以報名表及主辦方回覆為準。<a href="#pricing">查看費用資訊</a></p>
+</details>
+<details class="faq-item">
+<summary>鶯歌美食地圖怎麼使用？店家資訊會即時更新嗎？</summary>
+<p>地圖清單分為正餐主食、咖啡茶飲烘焙、甜點點心街邊小吃；點選店名會移動到地圖上的標記，也可開啟 Google My Maps 查看。清單是行前探索參考，並非即時營業狀態或預約資訊；營業時間、價格、菜單和地址可能變動，出發前請向店家確認。<a href="#food-map">前往美食地圖</a></p>
 </details>
 </div>
 </section>
@@ -229,7 +260,7 @@
 <button class="assistant-close" type="button" aria-label="關閉問答視窗">×</button>
 </header>
 <div class="assistant-messages" id="assistant-messages" role="log" aria-live="polite" aria-relevant="additions text">
-<p class="assistant-message assistant-bot">你好！想問行程、門票或景點地址嗎？</p>
+<p class="assistant-message assistant-bot">你好！我可以協助你了解行程安排、集合解散、交通、親子準備、費用與美食地圖。提出情境或想確認的細節，我會盡量整理完整資訊給你。</p>
 </div>
 <div class="assistant-quick-questions" aria-label="常見問題">
 <button type="button">行程時間</button>
@@ -252,26 +283,75 @@
 const introOverlay = document.querySelector(".intro-overlay");
 introOverlay.addEventListener("animationend", () => introOverlay.remove(), { once: true });
 
-const currentDatetime = document.querySelector("#current-datetime");
-const datetimeFormatter = new Intl.DateTimeFormat("zh-TW", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-  weekday: "long",
-  hour: "2-digit",
-  minute: "2-digit",
-  second: "2-digit",
-  hour12: false
-});
+const heroCarouselImages = [
+  { src: "image/陶集吉_Banner-03-collage.jpg", alt: "鶯歌陶瓷博物館、陶瓷老街與新旺集瓷行程 Banner" },
+  { src: "image/陶集吉_Banner-02-timeline_1920x640.jpg", alt: "鶯歌一日遊行程 Banner，包含火車站、陶博館、景觀電梯、午餐、手拉坯與豆花" },
+  { src: "image/陶集吉_Banner-04-promo.jpg", alt: "陶集吉親子陶藝一日遊優惠 Banner", registrationCta: true },
+  { src: "image/陶集吉_Banner-01-hero.jpg", alt: "鶯歌親子陶藝一日遊 Banner", registrationCta: true }
+];
+const heroCarousel = document.querySelector(".hero-carousel");
+const heroBanner = heroCarousel.querySelector(".hero-banner-current");
+const heroBannerPrevious = heroCarousel.querySelector(".hero-banner-previous");
+const heroBannerCta = heroCarousel.querySelector(".hero-banner-cta");
+const heroCarouselDots = Array.from(heroCarousel.querySelectorAll("[data-carousel-slide]"));
+let activeHeroSlide = 0;
+let heroCarouselTimer;
 
-function updateCurrentDatetime() {
-  const now = new Date();
-  currentDatetime.dateTime = now.toISOString();
-  currentDatetime.textContent = datetimeFormatter.format(now);
+function showHeroSlide(index) {
+  activeHeroSlide = (index + heroCarouselImages.length) % heroCarouselImages.length;
+  const slide = heroCarouselImages[activeHeroSlide];
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  heroBannerPrevious.src = heroBanner.src;
+  heroBannerPrevious.hidden = reduceMotion;
+  heroBanner.src = slide.src;
+  heroBanner.alt = slide.alt;
+  heroBannerCta.dataset.slide = String(activeHeroSlide);
+  heroBannerCta.hidden = !slide.registrationCta;
+  heroBanner.classList.remove("is-changing");
+  if (!reduceMotion) {
+    void heroBanner.offsetWidth;
+    heroBanner.classList.add("is-changing");
+  }
+  heroCarouselDots.forEach((dot, dotIndex) => {
+    if (dotIndex === activeHeroSlide) dot.setAttribute("aria-current", "true");
+    else dot.removeAttribute("aria-current");
+  });
 }
 
-updateCurrentDatetime();
-window.setInterval(updateCurrentDatetime, 1000);
+heroBanner.addEventListener("animationend", (event) => {
+  if (event.animationName === "hero-slide-enter") heroBannerPrevious.hidden = true;
+});
+
+function startHeroCarousel() {
+  window.clearInterval(heroCarouselTimer);
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    heroCarouselTimer = window.setInterval(() => showHeroSlide(activeHeroSlide + 1), 5000);
+  }
+}
+
+heroCarousel.querySelectorAll("[data-carousel-step]").forEach((button) => {
+  button.addEventListener("click", () => {
+    showHeroSlide(activeHeroSlide + Number(button.dataset.carouselStep));
+    startHeroCarousel();
+  });
+});
+heroCarouselDots.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    showHeroSlide(Number(dot.dataset.carouselSlide));
+    startHeroCarousel();
+  });
+});
+heroCarousel.addEventListener("mouseenter", () => window.clearInterval(heroCarouselTimer));
+heroCarousel.addEventListener("mouseleave", startHeroCarousel);
+heroCarousel.addEventListener("focusin", () => window.clearInterval(heroCarouselTimer));
+heroCarousel.addEventListener("focusout", (event) => {
+  if (!heroCarousel.contains(event.relatedTarget)) startHeroCarousel();
+});
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) window.clearInterval(heroCarouselTimer);
+  else startHeroCarousel();
+});
+startHeroCarousel();
 
 const pageSections = Array.from(document.querySelectorAll("main section, footer[id]"));
 const sectionLinks = Array.from(document.querySelectorAll('nav a[href^="#"]:not(.nav-logo)'));
@@ -424,10 +504,19 @@ function addAssistantMessage(text, sender, link) {
 function answerAssistantQuestion(question) {
   const text = question.toLowerCase().replace(/\s+/g, "");
   if (/行程|幾點|時間|幾點集合|集合/.test(text)) {
-    return { text: "行程是 09:30 鶯歌火車站集合、10:00 陶瓷博物館、途中經過鶯歌透明景觀電梯、12:30 老街午餐、14:00 新旺集瓷、15:40 阿嬤ㄟ豆花，16:30 結束。", link: { label: "查看完整行程", url: "#itinerary" } };
+    return { text: "預計 09:30 在鶯歌火車站集合，10:00 參觀陶瓷博物館，途中經過透明景觀電梯，約 12:30 在老街自行安排午餐，14:00 走訪新旺集瓷，15:40 到阿嬤ㄟ豆花，約 16:30 回到鶯歌火車站解散。時間為行程規劃參考，可能依現場狀況調整；建議預留返程交通彈性。", link: { label: "查看完整行程", url: "#itinerary" } };
   }
   if (/早鳥|套裝|價格|門票|票價|多少錢|費用|花費|免費/.test(text)) {
-    return { text: "一般價格為兩人 NT$2,399（約 NT$1,200／人）、三人 NT$3,499（約 NT$1,166／人）、四人 NT$4,599（約 NT$1,150／人）、五人 NT$5,599（約 NT$1,120／人）；早鳥原價 NT$1,199／人打 9 折，優惠價 NT$1,079／人（2 人以上報名）。費用包含專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花，不含交通與午餐。" };
+    return { text: "兩人成團。2 人方案 NT$1,998（NT$999／人）；3 人 NT$2,799、4 人 NT$3,699、5 人 NT$4,599。早鳥團體價維持 2 人 NT$1,799、3 人 NT$2,699、4 人 NT$3,599、5 人 NT$4,499。費用包含專人導覽、手拉坯 DIY、陶瓷博物館門票及阿嬤ㄟ豆花；不含往返交通和午餐，其他購物或額外體驗依現場為準。早鳥期限、名額、付款及取消改期規則請以報名表和主辦方回覆為準。", link: { label: "查看費用資訊", url: "#pricing" } };
+  }
+  if (/小朋友|小孩|親子|推車|兒童|孩子/.test(text)) {
+    return { text: "行程以親子陶藝、博物館參觀與老街步行為主，包含手拉坯 DIY；適合程度仍需依孩子年齡、步行狀況及體驗店家規範評估。建議穿好走的鞋、帶飲水與防曬或雨具，並由家長全程陪同。推車、無障礙通行、特殊照護或過敏需求，請報名前先向主辦方確認場地與安排。" };
+  }
+  if (/解散|結束|返家|回程|散場/.test(text)) {
+    return { text: "行程預計約 16:30 回到台鐵鶯歌火車站解散，與早上集合地點相同（新北市鶯歌區文化路 68-1 號）。請預留回程班次與轉乘時間，離開前確認同行成員及隨身物品；如當日行程有調整，請依現場通知為準。", link: { label: "查看火車站位置", url: "https://www.google.com/maps/search/?api=1&query=%E9%B6%AF%E6%AD%8C%E7%81%AB%E8%BB%8A%E7%AB%99" } };
+  }
+  if (/美食|餐廳|店家|吃飯|午餐|素食|食物|咖啡|甜點/.test(text)) {
+    return { text: "美食地圖分為三類：正餐・主食（茶家食堂、漢堡、甕仔麵）、咖啡・茶飲・烘焙（茶空間、可頌咖啡廳、酸種麵包），以及甜點・點心・街邊小吃（豆花、麻糬、紅豆餅等）。午餐由參加者自理，清單是探索參考；營業時間、價格、菜單與素食／過敏原資訊請直接向店家確認。", link: { label: "開啟美食地圖", url: "#food-map" } };
   }
   if (/博物館|陶博/.test(text) && /地址|在哪|地點|地圖|怎麼去/.test(text)) {
     return { text: "鶯歌陶瓷博物館地址：新北市鶯歌區文化路 200 號。", link: { label: "開啟 Google 地圖", url: "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E9%B6%AF%E6%AD%8C%E9%99%B6%E7%93%B7%E5%8D%9A%E7%89%A9%E9%A4%A8" } };
